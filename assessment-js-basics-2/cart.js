@@ -107,3 +107,4 @@ let customer = {
     address: '123 billybob lane, Billy Town TX, 12345',
     rating: 8
 }
+console.log(customer);
