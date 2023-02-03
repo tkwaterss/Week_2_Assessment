@@ -236,7 +236,6 @@ const filterByPropertyThree = (property,number,type) => filteredArray = foodArr.
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
-
     You'll have to console.log to see the filtered array
 */
 

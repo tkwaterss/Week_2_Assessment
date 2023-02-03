@@ -69,8 +69,8 @@ empOne.getSchedule()
 
 //CODE HERE
 //copying empOne data to empTwo, then changing empTwo
-let empTwo = {...empOne}
-empTwo.name = 'Nick';
+let empTwo = {...empOne, name: 'Nick'}
+// empTwo.name = 'Nick';
 console.log(empTwo);
 
 

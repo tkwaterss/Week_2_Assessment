@@ -64,7 +64,8 @@ const calcFinalPrice = (cartTotal,couponValue,tax) => {
     // calculate the total with tax
     cartTotal *= (tax + 1);
     //return the taxed total with the coupons removed from the cost
-    return cartTotal -= couponValue;
+    cartTotal -= couponValue;
+    return cartTotal.toFixed(2);
 }
 console.log(calcFinalPrice(25,5,.05));
 
