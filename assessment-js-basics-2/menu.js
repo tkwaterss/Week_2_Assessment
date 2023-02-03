@@ -31,6 +31,7 @@
 */
 
 //CODE HERE
+//creating an object called pizza with related keys and values
 let pizza = {
     name: "Billy's Special",
     price: 4.20,
@@ -98,6 +99,7 @@ let {category} = pizza;
 */
 
 //CODE HERE
+//creating multiple instance of pizza objects in an array
 let foodArr = [
     {
         name: "Meat Lovers",
@@ -155,6 +157,7 @@ let foodArr = [
 */
 
 //CODE HERE
+//using the .filter method to make an array of only pizzas with a certain tag
 const filteredFood = foodArr.filter(object => object.tags.includes('pineapple'))
    
 // console.log(filteredFood);
@@ -201,9 +204,13 @@ const filteredFood = foodArr.filter(object => object.tags.includes('pineapple'))
 
 //CODE HERE
 //main solution
+//using the filter method in a function to sort the pizzas according to 3 parameters
 const filterByPropertyTwo = (property,number,type) => {
+    //setting the filtered array equal to a new array variable
     let filteredArray = foodArr.filter((object) => {
+        //checking if above or below
         if (type === 'above') {
+            //return true or false for filter method, adds or does not add object depedning on criteria
             return object[property] >= number
         } else {
             return object[property] <= number

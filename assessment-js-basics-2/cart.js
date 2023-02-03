@@ -34,10 +34,12 @@ const cart = [
 ]
 
 //CODE HERE
-
+//using the reduce method to look at each price and add them together
 const summedPrice = cart.reduce((acc,object) => {
+    //each element is an object so object notation must be used to access price
     return acc + object.price;
 },0)
+//since elements are objects we must declar an initial value that is a number to begin adding
 console.log(summedPrice);
 
 
@@ -57,8 +59,11 @@ console.log(summedPrice);
 */
 
 //CODE HERE
+//writing a function to add tax and coupons
 const calcFinalPrice = (cartTotal,couponValue,tax) => {
+    // calculate the total with tax
     cartTotal *= (tax + 1);
+    //return the taxed total with the coupons removed from the cost
     return cartTotal -= couponValue;
 }
 console.log(calcFinalPrice(25,5,.05));
@@ -100,6 +105,7 @@ rating: to keep track of interactions, are they on time? tip well? - number - pu
 */
 
 //CODE HERE
+//creating a customer according to guidelines setout above
 let customer = {
     name: 'Billy Bobby',
     phone: '123-456-7890',

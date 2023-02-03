@@ -20,11 +20,14 @@
 */
 
 //CODE HERE
+//creating a new Employee class
 class Employee {
+    //constructor lists keys that require input for creating
     constructor(name,shifts) {
         this.name = name;
         this.shifts = shifts;
     }
+    //creating a method that will print when the employee works
     getSchedule() {
         console.log(`${this.name} works on ${this.shifts}`);
     }
@@ -42,6 +45,7 @@ class Employee {
 */
 
 //CODE HERE
+//creating an instance of Employee
 let empOne = new Employee('Billy','blood moons and solar eclipses, all day');
 /*
     Call the `getSchedule` method on the
@@ -64,6 +68,7 @@ empOne.getSchedule()
 */
 
 //CODE HERE
+//copying empOne data to empTwo, then changing empTwo
 let empTwo = {...empOne}
 empTwo.name = 'Nick';
 console.log(empTwo);
@@ -94,14 +99,19 @@ console.log(empTwo);
 */
 
 //CODE HERE
+//Creating new Manager subclass off Employee class
 class Manager extends Employee {
+    //constructor includes all desired key inputs
     constructor(name,shifts,employees) {
+        //super simplifies creating the subclass
         super(name,shifts);
         this.employees = employees;
     }
+    //method to list the employees under the manager
     getEmployees() {
         console.log(`${this.name} manages ${this.employees}`);
     }
+    //method to add employees under the manager
     addEmployees(emp) {
         this.employees.push(emp);
     }
@@ -120,6 +130,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
+//creating new manager object with Manager class
 let manager = new Manager('Bobby','new moons and blue moons, all day',['Bill','Bob'])
 
 /*

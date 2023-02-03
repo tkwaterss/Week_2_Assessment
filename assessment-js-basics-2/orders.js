@@ -30,13 +30,17 @@
 */
 
 //CODE HERE
+//creating a class called Ticket
 class Ticket {
+    //listing required inputs for object creation
     constructor(items, orderTime, customerId) {
         this.items = items;
         this.orderTime = orderTime;
         this.customerId = customerId;
+        //Automatic key creating requires no input on creation of object
         this.status = 'queued';
     }
+    //creating new method to update order status
     updateStatus(newStatus) {
         this.status = newStatus;
         console.log(`The order for customer ${this.customerId} is now ${this.status}`);
@@ -56,6 +60,7 @@ class Ticket {
 */
 
 //CODE HERE
+//creating new Ticket instance
 let firstTicket = new Ticket('pasta, salad, and wine','5:00am',420);
 
 /*
@@ -65,6 +70,7 @@ let firstTicket = new Ticket('pasta, salad, and wine','5:00am',420);
 */
 
 //CODE HERE
+//invoking the method and checking results
 firstTicket.updateStatus('cooking')
 
 console.log(firstTicket);
